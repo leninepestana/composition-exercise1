@@ -47,7 +47,7 @@ public class Program {
 			//sc.next();
 			System.out.print("Product name: ");
 			String productName = sc.next();
-			System.out.print("Product price:");
+			System.out.print("Product price: ");
 			double priceItem = sc.nextDouble();
 			
 			Product product = new Product(productName, priceItem);
@@ -55,7 +55,8 @@ public class Program {
 			System.out.print("Quantity: ");
 			int quantity = sc.nextInt();
 			
-			OrderItem orderItem = new OrderItem(quantityItem, priceItem, product);
+			//OrderItem orderItem = new OrderItem(quantityItem, priceItem, product);
+			OrderItem orderItem = new OrderItem(quantity, priceItem, product);
 			
 			order.addOrderItem(orderItem);
 		}
@@ -64,6 +65,7 @@ public class Program {
 		System.out.println();
 		System.out.println("ORDER SUMMARY:");
 		System.out.println(order);
+		//System.out.println(order.total());
 		sc.close();
 	}
 }
